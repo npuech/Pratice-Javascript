@@ -104,6 +104,7 @@ console.log("Bravo ! Vous avez deviné")
 
 console.log(Object.getPrototypeOf({a:1}));
 
+//OBJETS
 
 const ticket = {
     nomFilm: "Star Wars",
@@ -128,3 +129,15 @@ const infoPermis = {
 const texteBorne = "Bonjour M." + infoPermis.nom + infoPermis.prenom + ", vous avez " + infoPermis.age + " ans, vous etes " + infoPermis.nationalite + " et votre permis est valable jusqu'au " + infoPermis.datePermis + ".";
 
 console.log(texteBorne);
+
+const infoProduit = {
+    vetement: "T-shirt",
+    couleur: "noir",
+    marque: "Modern Sport",
+    taille: "L",
+    prix: 14.99
+};
+
+const textProduit = "Le " + infoProduit.vetement + " de couleur " + infoProduit.couleur + " de la marque " + infoProduit.marque + " de taille " + infoProduit.taille + " est disponible au prix de " + infoProduit.prix + "€.";
+
+console.log(textProduit);
