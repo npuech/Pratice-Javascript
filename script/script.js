@@ -141,3 +141,44 @@ const infoProduit = {
 const textProduit = "Le " + infoProduit.vetement + " de couleur " + infoProduit.couleur + " de la marque " + infoProduit.marque + " de taille " + infoProduit.taille + " est disponible au prix de " + infoProduit.prix + "€.";
 
 console.log(textProduit);
+
+//TABLEAUX
+
+let mesFilms = ["Avengers", "Star Wars", "Harry Potter"]
+
+mesFilms.push("Spiderman");
+
+const maCollectionFilms = mesFilms.length
+
+console.log(mesFilms);
+console.log(maCollectionFilms);
+
+
+/* A RETENIR : 
+.pop() : supprime le dernier élément d'un  tableau.
+.push() : ajoute un élément à la fin du tableau.
+.length : permet de connaitre la taille du tableau.
+
+Le copie par valeur est utilisée pour les types primitifs.
+Le copie par référence est utilisée pour les objets et les tableaux.*/
+
+let playlist = ["Sweet O Child O Mine", "Paradise City", "Rocket Queen"]
+
+playlist.push("Welcome to the Jungle", "November Rain")
+playlist.pop()
+
+const totalMorceaux = playlist.length
+
+console.log(playlist);
+console.log(totalMorceaux);
+
+
+let mesAccessoires = ["Casque", "Souris", "Clavier", "Écran", "Micro"]
+
+mesAccessoires.push("Tapis de souris", "Webcam")
+mesAccessoires.pop()
+
+const totalAccesoires = mesAccessoires.length
+
+console.log(mesAccessoires);
+console.log("Le total de mes accesoires sont de " + totalAccesoires + ".");
