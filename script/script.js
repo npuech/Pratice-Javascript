@@ -99,20 +99,32 @@ for (let letter in greeting) {
     console.log(letter)
 }
 
-const guess = 8
-
-while(true) {
-    const chiffre = prompt("Votre chiffre") * 1
-    if (chiffre < guess) {
-        console.log("Plus")
-    } else if (chiffre > guess) {
-        console.log("Moins")
-    } else {
-        break
-    }
-}
-
 console.log("Bravo ! Vous avez deviné")
 
 
 console.log(Object.getPrototypeOf({a:1}));
+
+
+const ticket = {
+    nomFilm: "Star Wars",
+    prix: 10,
+    numeroSalle: 3
+}
+
+let nom = "PUECH";
+
+let texteAffichage = "Bonjour " + nom + ", Votre film " + ticket.nomFilm + " est en salle " + ticket.numeroSalle + ".";
+
+console.log(texteAffichage);
+
+const infoPermis = {
+    age: 17,
+    nom: "PUECH",
+    prenom: "Noa",
+    nationalite: "Français",
+    datePermis: "05/02/2024"
+}
+
+const texteBorne = "Bonjour " + infoPermis.nom + infoPermis.prenom + ", vous avez " + infoPermis.age + " ans, vous etes " + infoPermis.nationalite + " et votre permis est valable jusqu'au " + infoPermis.datePermis + ".";
+
+console.log(texteBorne);
