@@ -119,12 +119,12 @@ console.log(texteAffichage);
 
 const infoPermis = {
     age: 17,
-    nom: "PUECH",
-    prenom: "Noa",
+    nom: "PUECH ",
+    prenom: " Noa",
     nationalite: "Français",
     datePermis: "05/02/2024"
 }
 
-const texteBorne = "Bonjour " + infoPermis.nom + infoPermis.prenom + ", vous avez " + infoPermis.age + " ans, vous etes " + infoPermis.nationalite + " et votre permis est valable jusqu'au " + infoPermis.datePermis + ".";
+const texteBorne = "Bonjour M." + infoPermis.nom + infoPermis.prenom + ", vous avez " + infoPermis.age + " ans, vous etes " + infoPermis.nationalite + " et votre permis est valable jusqu'au " + infoPermis.datePermis + ".";
 
 console.log(texteBorne);
