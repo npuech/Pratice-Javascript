@@ -182,3 +182,28 @@ const totalAccesoires = mesAccessoires.length
 
 console.log(mesAccessoires);
 console.log("Le total de mes accesoires sont de " + totalAccesoires + ".");
+
+//CONDITIONS
+/* Une condition est une expression qui peut etre évaluée comme vraie ou fausse.*/
+
+let motTapeOk = false;
+
+if (motTapeOk === true) {
+    console.log("Le mot est bon !")
+} else {
+    console.log("Le mot est faux !")
+}
+
+/* Prompt permet de demander à l'utilisateur de saisir une valeur.*/
+/* === : égalité stricte, vérifie si les deux valeurs sont identiques.*/
+
+/* EXERCICE 1 */
+const motApplication = "Clavier";
+
+let motUtilisateur = prompt("Entrez un mot : " + motApplication);
+
+if (motUtilisateur === motApplication) {
+    console.log("Bravo !")
+} else {
+    console.log("Vous avez fait une erreur !")
+}
