@@ -265,21 +265,23 @@ let score = 0;
 
 if (choixUtilisateur === "mots") {
     for (let i = 0; i < listeMots.length; i++) { //Boucle pour les mots
-        let motUtilisateur = prompt("Entrez un mot : " + listeMots[i]);
+        let motUtilisateur = prompt("Entrez le mot : " + listeMots[i]);
         if (motUtilisateur === listeMots[i]) {
             score++;
             console.log("Bravo")
         }
     }
+    //Affiche le score du joueur
+    console.log("Votre score est de " + score + " points.");
+
 } else if (choixUtilisateur === "pharses") {
     for (let i = 0; i < listePhrases.length; i++) { //Boucle pour les phrases
-        let phraseUtilisateur = prompt("Entez une phrase :" + listePhrases[i]) 
+        let phraseUtilisateur = prompt("Entez la phrase :" + listePhrases[i]) 
         if (phraseUtilisateur === listePhrases[i]) {
             score++;
             console.log("Bravo")
         }
     }
+    //Affiche le score du joueur
+    console.log("Votre score est de " + score + " points.");
 }
-
-//Affiche le score du joueur
-console.log("Votre score est de " + score + " points.");
