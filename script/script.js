@@ -198,7 +198,7 @@ if (motTapeOk === true) {
 /* === : égalité stricte, vérifie si les deux valeurs sont identiques.*/
 
 /* EXERCICE 1 */
-const motApplication = "Clavier";
+/* const motApplication = "Clavier";
 
 let motUtilisateur = prompt("Entrez un mot : " + motApplication);
 
@@ -206,14 +206,14 @@ if (motUtilisateur === motApplication) {
     console.log("Bravo !")
 } else {
     console.log("Vous avez fait une erreur !")
-}
+} */
 
 /* EXERCICE 2*/
 /* switch : permet d'évaluer une expression et d'exécuter une instruction correspondante.
 /*case : permet de définir une valeur à comparer avec l'expression.*/
 /* break : permet de sortir du block switch.*/
 
-switch (motUtilisateur) {
+/* switch (motUtilisateur) {
     case motApplication :
         console.log("Bravo !")
         break;
@@ -225,7 +225,7 @@ switch (motUtilisateur) {
     break;
     default : 
     console.log("Erreur !")
-}
+} */
 
 /* EXERCICE 3 */
 
@@ -251,3 +251,24 @@ if (motUtilisateur2 === listeMots[2]) {
 }
 
 console.log("Votre score est de " + score + " points.")
+
+//BOUCLES 
+
+/* Une boucle permet de répéter une ou plusieurs instructions. */
+/* On commence à partir de 0.*/
+/* Une boucle for est composée de 3 parties : initialisation, conditions et incrémentation.*/
+/* i++ : incrémente la valeur de i de 1.*/
+/* i < 5 : la boucle s'arrete quand i est supérieur à 5.*/
+
+for (let i = 0; i < 3; i++) {
+    console.log(i);
+}
+
+/* Une boucle while est composée de 2 parties : conditions et incrémentation.*/
+
+let i = 0;
+
+while (i < 3) {
+    console.log(i);
+    i++;
+}
