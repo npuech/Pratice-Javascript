@@ -232,8 +232,6 @@ if (motUtilisateur === motApplication) {
 const listeMots = ["Cachalot", "Pétunia", "Serviette"]
 let score = 0;
 
-console.log("Votre score est de " + score + " points.")
-
 //BOUCLES 
 
 /* Une boucle permet de répéter une ou plusieurs instructions. */
@@ -257,10 +255,11 @@ while (i < 3) {
 
 /* EXERCICE 1*/
 
-for (let compteur = 0; compteur < listeMots.length; compteur++) {
-    let motUtilisateur2 = prompt("Entrez le mot : " + listeMots[0]);
-
-    if (motUtilisateur2 === listeMots[0]) {
+for (let i = 0; i < listeMots.length; i++) {
+    let motUtilisateur2 = prompt("Entrez le mot : " + listeMots[i]);
+    if (motUtilisateur2 === listeMots[i]) {
         score++;
     }
 }
+
+console.log("Votre score est de " + score + " points.");
