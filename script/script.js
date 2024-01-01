@@ -207,3 +207,47 @@ if (motUtilisateur === motApplication) {
 } else {
     console.log("Vous avez fait une erreur !")
 }
+
+/* EXERCICE 2*/
+/* switch : permet d'évaluer une expression et d'exécuter une instruction correspondante.
+/*case : permet de définir une valeur à comparer avec l'expression.*/
+/* break : permet de sortir du block switch.*/
+
+switch (motUtilisateur) {
+    case motApplication :
+        console.log("Bravo !")
+        break;
+    case "Souris" : 
+    console.log("Vous avez fait une erreur !")
+    break;
+    case "Casque" : 
+    console.log("Non !")
+    break;
+    default : 
+    console.log("Erreur !")
+}
+
+/* EXERCICE 3 */
+
+const listeMots = ["Cachalot", "Pétunia", "Serviette"]
+let score = 0;
+
+let motUtilisateur2 = prompt("Entrez le mot : " + listeMots[0]);
+
+if (motUtilisateur2 === listeMots[0]) {
+    score++;
+}
+
+motUtilisateur2 = prompt("Entrez le mot : " + listeMots[1]);
+
+if (motUtilisateur2 === listeMots[1]) {
+    score++;
+}
+
+motUtilisateur2 = prompt("Entrez le mot : " + listeMots[2]);
+
+if (motUtilisateur2 === listeMots[2]) {
+    score++;
+}
+
+console.log("Votre score est de " + score + " points.")
