@@ -253,8 +253,13 @@ while (i < 3) {
 
 const listeMots = ["Cachalot", "Pétunia", "Serviette"]
 const listePhrases = ["Pas de panique !", "La vie, l'univers et le reste !", "Merci pour le poisson !"]
+
 //Demande à l'utilisateur s'il veut jouer avec des mots ou des phrases
-let choixUtilisateur = prompt("Voulez-vous jouer avec des 'mots' ou des 'phrases' ?")
+let choixUtilisateur = prompt("Voulez-vous jouer avec des mots ou des phrases ?")
+//Tant que l'utilisateur n'a pas entré "mots" ou "phrases", on lui redemande
+while (choixUtilisateur !== "mots" && choixUtilisateur !== "phrases") {
+    choixUtilisateur = prompt("Voulez-vous jouer avec des mots ou des phrases ?")
+}
 
 let score = 0;
 
