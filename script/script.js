@@ -232,24 +232,6 @@ if (motUtilisateur === motApplication) {
 const listeMots = ["Cachalot", "Pétunia", "Serviette"]
 let score = 0;
 
-let motUtilisateur2 = prompt("Entrez le mot : " + listeMots[0]);
-
-if (motUtilisateur2 === listeMots[0]) {
-    score++;
-}
-
-motUtilisateur2 = prompt("Entrez le mot : " + listeMots[1]);
-
-if (motUtilisateur2 === listeMots[1]) {
-    score++;
-}
-
-motUtilisateur2 = prompt("Entrez le mot : " + listeMots[2]);
-
-if (motUtilisateur2 === listeMots[2]) {
-    score++;
-}
-
 console.log("Votre score est de " + score + " points.")
 
 //BOUCLES 
@@ -260,15 +242,25 @@ console.log("Votre score est de " + score + " points.")
 /* i++ : incrémente la valeur de i de 1.*/
 /* i < 5 : la boucle s'arrete quand i est supérieur à 5.*/
 
-for (let i = 0; i < 3; i++) {
+/*for (let i = 0; i < 3; i++) {
     console.log(i);
-}
+} */
 
 /* Une boucle while est composée de 2 parties : conditions et incrémentation.*/
 
-let i = 0;
+/*let i = 0;
 
 while (i < 3) {
     console.log(i);
     i++;
+} */
+
+/* EXERCICE 1*/
+
+for (let compteur = 0; compteur < listeMots.length; compteur++) {
+    let motUtilisateur2 = prompt("Entrez le mot : " + listeMots[0]);
+
+    if (motUtilisateur2 === listeMots[0]) {
+        score++;
+    }
 }
