@@ -227,11 +227,6 @@ if (motUtilisateur === motApplication) {
     console.log("Erreur !")
 } */
 
-/* EXERCICE 3 */
-
-const listeMots = ["Cachalot", "Pétunia", "Serviette"]
-let score = 0;
-
 //BOUCLES 
 
 /* Une boucle permet de répéter une ou plusieurs instructions. */
@@ -253,13 +248,33 @@ while (i < 3) {
     i++;
 } */
 
-/* EXERCICE 1*/
 
-for (let i = 0; i < listeMots.length; i++) {
-    let motUtilisateur2 = prompt("Entrez le mot : " + listeMots[i]);
-    if (motUtilisateur2 === listeMots[i]) {
-        score++;
+/* EXERCICE 2*/
+
+const listeMots = ["Cachalot", "Pétunia", "Serviette"]
+const listePhrases = ["Pas de panique !", "La vie, l'univers et le reste !", "Merci pour le poisson !"]
+//Demande à l'utilisateur s'il veut jouer avec des mots ou des phrases
+let choixUtilisateur = prompt("Voulez-vous jouer avec des 'mots' ou des 'phrases' ?")
+
+let score = 0;
+
+if (choixUtilisateur === "mots") {
+    for (let i = 0; i < listeMots.length; i++) { //Boucle pour les mots
+        let motUtilisateur = prompt("Entrez un mot : " + listeMots[i]);
+        if (motUtilisateur === listeMots[i]) {
+            score++;
+            console.log("Bravo")
+        }
+    }
+} else if (choixUtilisateur === "pharses") {
+    for (let i = 0; i < listePhrases.length; i++) { //Boucle pour les phrases
+        let phraseUtilisateur = prompt("Entez une phrase :" + listePhrases[i]) 
+        if (phraseUtilisateur === listePhrases[i]) {
+            score++;
+            console.log("Bravo")
+        }
     }
 }
 
+//Affiche le score du joueur
 console.log("Votre score est de " + score + " points.");
