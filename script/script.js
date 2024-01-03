@@ -248,47 +248,54 @@ while (i < 3) {
     i++;
 } */
 
-
-/* EXERCICE 2*/
-
-//Demande à l'utilisateur s'il veut jouer avec des mots ou des phrases
-let choixUtilisateur = prompt("Voulez-vous jouer avec des mots ou des phrases ?")
-//Tant que l'utilisateur n'a pas entré "mots" ou "phrases", on lui redemande
-while (choixUtilisateur !== "mots" && choixUtilisateur !== "phrases") {
-    choixUtilisateur = prompt("Voulez-vous jouer avec des mots ou des phrases ?")
-}
-
-//Variable pour le score
-let score = 0;
-
-//Si l'utilisateur a choisi "mots", on lui demande de saisir les mots
-if (choixUtilisateur === "mots") {
-    for (let i = 0; i < listeMots.length; i++) { //Boucle pour les mots
-        let motUtilisateur = prompt("Entrez le mot : " + listeMots[i]);
-        if (motUtilisateur === listeMots[i]) {
-            score++;
-            console.log("Bravo")
-        }
-    }
-    //Affiche le score du joueur
-    console.log("Votre score est de " + score + " points.");
-
-    //Sinon si l'utilisateur a choisi "phrases", on lui demande de saisir les phrases
-} else if (choixUtilisateur === "pharses") {
-    for (let i = 0; i < listePhrases.length; i++) { //Boucle pour les phrases
-        let phraseUtilisateur = prompt("Entez la phrase :" + listePhrases[i]) 
-        if (phraseUtilisateur === listePhrases[i]) {
-            score++;
-            console.log("Bravo")
-        }
-    }
-    //Affiche le score du joueur
-    console.log("Votre score est de " + score + " points.");
-}
-
 //FONCTIONS
 /* Une fonction est un bloc de code qui peut être appelé plusieurs fois. */
 /* Une fonction peut avoir des paramètres. */
 /* Une fonction peut retourner une valeur. */
 /* Pour déclarer une fonction, on utilise le mot clé function. */
 
+function afficherResultat(score, nbMotsProposes) {
+    console.log("Votre score est de " + score + " sur " + nbMotsProposes);
+}
+
+function choisirPhrasesOuMots() {
+    //Demande à l'utilisateur s'il veut jouer avec des mots ou des phrases
+    let choixUtilisateur = prompt("Voulez-vous jouer avec des mots ou des phrases ?")
+//Tant que l'utilisateur n'a pas entré "mots" ou "phrases", on lui redemande
+    while (choixUtilisateur !== "mots" && choixUtilisateur !== "phrases") {
+    choixUtilisateur = prompt("Voulez-vous jouer avec des mots ou des phrases ?")
+}
+//On retourne le choix de l'utilisateur
+return choixUtilisateur;
+}
+
+function lancerBoucleDeJeu(listePropositions) {
+    let score = 0;
+    for (let i = 0; i < listePropositions.length; i++) { //Boucle pour les mots
+        let motUtilisateur = prompt("Entrez le mot : " + listePropositions[i]);
+        if (motUtilisateur === listePropositions[i]) {
+            score++;
+            console.log("Bravo")
+        }
+    }
+    //Affiche le score du joueur
+    return score;
+}
+
+function lancerJeu() {
+    let choix = choisirPhrasesOuMots();
+    let score = 0;
+    let nbMotsProposes = 0;
+
+    if (choix === "mots") {
+        score = lancerBoucleDeJeu(listeMots);
+        nbMotsProposes = listeMots.length;
+    } else (choix === "phrases") {
+        score = lancerBoucleDeJeu(listePhrases);
+        nbMotsProposes = listePhrases.length;
+    }
+
+    afficherResultat(score, nbMotsProposes);
+}
+
+lancerJeu();
