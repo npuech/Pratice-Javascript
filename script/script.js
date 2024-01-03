@@ -285,3 +285,10 @@ if (choixUtilisateur === "mots") {
     //Affiche le score du joueur
     console.log("Votre score est de " + score + " points.");
 }
+
+//FONCTIONS
+/* Une fonction est un bloc de code qui peut être appelé plusieurs fois. */
+/* Une fonction peut avoir des paramètres. */
+/* Une fonction peut retourner une valeur. */
+/* Pour déclarer une fonction, on utilise le mot clé function. */
+
