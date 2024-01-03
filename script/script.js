@@ -269,9 +269,13 @@ function choisirPhrasesOuMots() {
 return choixUtilisateur;
 }
 
+//Fonction qui va lancer la boucle de jeu
 function lancerBoucleDeJeu(listePropositions) {
+    //Initialise le score du joueur
     let score = 0;
-    for (let i = 0; i < listePropositions.length; i++) { //Boucle pour les mots
+    //Boucle pour les mots
+    for (let i = 0; i < listePropositions.length; i++) {
+        //Demande à l'utilisateur de saisir le mot
         let motUtilisateur = prompt("Entrez le mot : " + listePropositions[i]);
         if (motUtilisateur === listePropositions[i]) {
             score++;
@@ -282,19 +286,21 @@ function lancerBoucleDeJeu(listePropositions) {
     return score;
 }
 
+//Fonction qui va lancer le jeu
 function lancerJeu() {
     let choix = choisirPhrasesOuMots();
     let score = 0;
     let nbMotsProposes = 0;
-
+    //Si l'utilisateur a choisi "mots"
     if (choix === "mots") {
         score = lancerBoucleDeJeu(listeMots);
         nbMotsProposes = listeMots.length;
+        //Si l'utilisateur a choisi "phrases"
     } else if (choix === "phrases") {
         score = lancerBoucleDeJeu(listePhrases);
         nbMotsProposes = listePhrases.length;
     }
-
+    //Affiche le score du joueur
     afficherResultat(score, nbMotsProposes);
 }
 
