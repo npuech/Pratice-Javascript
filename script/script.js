@@ -303,5 +303,3 @@ function lancerJeu() {
     //Affiche le score du joueur
     afficherResultat(score, nbMotsProposes);
 }
-
-lancerJeu();
