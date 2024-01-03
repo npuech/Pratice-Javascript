@@ -290,7 +290,7 @@ function lancerJeu() {
     if (choix === "mots") {
         score = lancerBoucleDeJeu(listeMots);
         nbMotsProposes = listeMots.length;
-    } else (choix === "phrases") {
+    } else if (choix === "phrases") {
         score = lancerBoucleDeJeu(listePhrases);
         nbMotsProposes = listePhrases.length;
     }
