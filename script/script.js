@@ -303,3 +303,21 @@ function lancerJeu() {
     //Affiche le score du joueur
     afficherResultat(score, nbMotsProposes);
 }
+
+// Rangement de chiffre par ordre croissant
+
+//Boite de dialogue pour l'utilisateur pour lui demander un chiffre
+let a = prompt("Entrez un nombre :");
+let b = prompt("Entrez un nombre :");
+let c = prompt("Entrez un nombre :");
+
+//Conversion des ses chiffres en nombre
+a = Number
+b = Number
+c = Number
+
+
+const nums = [a, b, c];
+
+//Trie des chiffre nums dans l'ordre croissant
+document.write( nums.sort(function(a,b) {return a - b}) );
